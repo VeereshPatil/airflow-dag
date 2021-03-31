@@ -6,9 +6,8 @@ from airflow.operators.python_operator import PythonOperator
 from airflow.operators.check_operator import CheckOperator, IntervalCheckOperator, ValueCheckOperator
 
 from trainig import training
-from evaluation import evaluate
+#from evaluation import evaluate
 
-CONN_IDCONN_ID = 'dev_postgres'
 
 
 with DAG(
@@ -20,3 +19,10 @@ with DAG(
     enter_point = DummyOperator(
         task_id='enter_point'
     )
+    
+    train_model = PythonOperator(
+        task_id='train_model',
+        python_callable=training
+    )
+
+

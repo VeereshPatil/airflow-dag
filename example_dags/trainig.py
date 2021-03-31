@@ -3,6 +3,8 @@ import numpy as np
 import pandas as pd
 import logging
 from datetime import date
+from sklearn.datasets import load_boston
+from sklearn.externals import joblib
 from joblib import dump
 
 from sklearn.datasets import load_boston
@@ -12,7 +14,7 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.ensemble import RandomForestRegressor
 
 SEED = 42
-MODEL_PATH = 'dags/ml_project/models/'
+MODEL_PATH = 'example_dags/'
 
 np.random.seed(SEED)
 

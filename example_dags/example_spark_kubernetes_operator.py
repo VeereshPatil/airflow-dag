@@ -82,7 +82,7 @@ sensor = SparkKubernetesSensor(
     kubernetes_conn_id="kubernetes_in_cluster",
     dag=dag,
     #api_group="sparkoperator.hpe.com",
-    api_group="sparkapplications.sparkoperator.k8s.io"
+    api_group="sparkapplications.sparkoperator.k8s.io",
     attach_log=True
 )
 
